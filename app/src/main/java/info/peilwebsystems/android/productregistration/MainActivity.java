@@ -8,22 +8,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONObject;
 
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
+import info.peilwebsystems.android.productregistration.database.DBHelper;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -37,7 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static boolean existeNaBase = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        DBHelper.init(getApplicationContext());
         setContentView(R.layout.activity_main);
 
         scan = (Button) findViewById(R.id.btnScan);

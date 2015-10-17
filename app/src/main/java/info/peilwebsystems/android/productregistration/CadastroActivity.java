@@ -4,26 +4,23 @@ import android.content.Intent;
 import android.net.http.AndroidHttpClient;
 import android.os.Bundle;
 import android.os.Looper;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.net.URLEncoder;
 
-public class CadastroActivity extends AppCompatActivity {
+public class CadastroActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     private static final String ServerURL = "http://peilwebsystems.info/ServerAndroid/QualMercado/";
 
@@ -33,12 +30,14 @@ public class CadastroActivity extends AppCompatActivity {
     static boolean salvoBase;
 
 
-    String codigoBarras;
-    Button btnSalvar;
-    Button btnCancelar;
-    EditText txtNome;
-    EditText txtAlias;
-    EditText txtDescricao;
+    private String codigoBarras;
+    private Button btnSalvar;
+    private Button btnCancelar;
+    private EditText txtNome;
+    private EditText txtAlias;
+    private EditText txtDescricao;
+    private Spinner spinCategoria;
+    private Spinner spinSubCategoria;
 
     TextView txtCodigoBarras;
 
@@ -169,4 +168,13 @@ public class CadastroActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }

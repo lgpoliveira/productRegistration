@@ -32,7 +32,7 @@
             android:name=".CadastroActivity"
             android:label="@string/title_activity_cadastro"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.AppBarOverlay" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="info.peilwebsystems.android.productregistration.MainActivity" />

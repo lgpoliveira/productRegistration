@@ -1,25 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="info.peilwebsystems.android.productregistration.CadastroActivity">
 
-    <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
-        android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay">
+    <TextView
+        android:id="@+id/textCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/codigo_barras" />
 
-        <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
-            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary" app:popupTheme="@style/AppTheme.PopupOverlay" />
+    <TextView
+        android:id="@id/valueCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textCategoria"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textCodigo"
+        android:text="@string/codigo_barras" />
 
-    </android.support.design.widget.AppBarLayout>
+    <TextView
+        android:id="@+id/textCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textCodigo"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:text="@string/categoria"
 
-    <include layout="@layout/content_cadastro" />
+        />
 
-    <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end" android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
+    <Spinner
+        android:id="@+id/spinnerCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textCategoria"
+        android:layout_alignTop="@+id/textCategoria"
+        android:layout_toEndOf="@+id/textCategoria"
+        android:layout_toRightOf="@+id/textCategoria" />
 
-</android.support.design.widget.CoordinatorLayout>
+    <TextView
+        android:id="@+id/textSubCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textCategoria"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:text="@string/sub_categoria"
+
+        />
+
+    <Spinner
+        android:id="@+id/spinnerSubCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textSubCategoria"
+        android:layout_alignTop="@+id/textSubCategoria"
+        android:layout_toEndOf="@+id/textSubCategoria"
+        android:layout_toRightOf="@+id/textSubCategoria" />
+
+    <TextView
+        android:id="@+id/textMarca"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textSubCategoria"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:text="@string/marca"
+        />
+    <Spinner
+        android:id="@+id/spinnerMarca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textMarca"
+        android:layout_alignTop="@+id/textMarca"
+        android:layout_toRightOf="@+id/textMarca"
+         />
+
+    <TextView
+        android:id="@+id/textNome"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textMarca"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/editTextNome"
+        android:layout_toStartOf="@+id/editTextNome"
+        android:gravity="center_vertical"
+        android:text="@string/nome" />
+
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/valueCodigo"
+        android:layout_alignRight="@id/valueCodigo"
+        android:layout_alignTop="@+id/textNome"
+        android:layout_toEndOf="@+id/textCodigo"
+        android:layout_toRightOf="@+id/textCodigo"
+        android:inputType="textCapWords" />
+
+    <TextView
+        android:id="@+id/textAlias"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_alignLeft="@+id/textNome"
+        android:layout_below="@+id/textNome"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/editTextNome"
+        android:gravity="center_vertical"
+        android:text="@string/alias" />
+
+    <EditText
+        android:id="@+id/editTextAlias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editTextNome"
+        android:layout_alignRight="@+id/editTextNome"
+        android:layout_alignTop="@+id/textAlias"
+        android:layout_toRightOf="@+id/textAlias"
+        android:inputType="textCapWords" />
+
+    <TextView
+        android:id="@+id/textPesoVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_below="@+id/editTextAlias"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:text="@string/peso_volume" />
+
+    <EditText
+        android:id="@+id/editTextDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editTextAlias"
+        android:layout_alignRight="@+id/editTextAlias"
+        android:layout_alignTop="@+id/textPesoVolume"
+        android:layout_toRightOf="@+id/textPesoVolume"
+        android:inputType="textCapWords" />
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancelar"
+        android:layout_below="@+id/editTextDesc"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btnSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salvar"
+        android:layout_alignTop="@+id/btnCancelar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+
+
+</RelativeLayout>
