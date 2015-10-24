@@ -1,6 +1,6 @@
-CREATE TABLE if not exists Categoria ( ID INT NOT NULL AUTO_INCREMENT, Descricao VARCHAR(100) NOT NULL, PRIMARY KEY (ID), UNIQUE INDEX Descricao_UNIQUE (Descricao ASC));
-CREATE TABLE if not exists Sub_Categoria (ID INT NOT NULL AUTO_INCREMENT, ID_Categoria INT NOT NULL, Descricao VARCHAR(100) NOT NULL, PRIMARY KEY (ID), foreign key(ID_Categoria) references Categoria(ID),UNIQUE INDEX Descricao_UNIQUE (Descricao ASC));
-CREATE TABLE if not exists Marca ( ID int not null auto_increment, Descricao varchar(100), primary key (ID), unique index Descricao_UNIQUE (Descricao ASC));
+CREATE TABLE if not exists Categoria ( ID INT NOT NULL AUTOINCREMENT, Descricao TEXT NOT NULL, PRIMARY KEY (ID), UNIQUE Descricao_UNIQUE (Descricao ASC));
+CREATE TABLE if not exists Sub_Categoria (ID INT NOT NULL AUTOINCREMENT, ID_Categoria INT NOT NULL, Descricao TEXT NOT NULL, PRIMARY KEY (ID), foreign key(ID_Categoria) references Categoria(ID),UNIQUE Descricao_UNIQUE (Descricao ASC));
+CREATE TABLE if not exists Marca ( ID int not null AUTOINCREMENT, Descricao TEXT, primary key (ID), unique Descricao_UNIQUE (Descricao ASC));
 insert into Categoria (Descricao) values('Bazar');
 insert into Categoria (Descricao) values('Bebidas Alcoólicas');
 insert into Categoria (Descricao) values('Bebidas Não Alcoólicas');

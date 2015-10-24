@@ -15,6 +15,10 @@ public class Marca {
         this.descricao = descricao;
     }
 
+    public Marca() {
+
+    }
+
     public int getId() {
         return id;
     }

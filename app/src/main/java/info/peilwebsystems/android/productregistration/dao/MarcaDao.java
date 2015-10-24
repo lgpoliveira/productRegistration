@@ -48,4 +48,8 @@ public class MarcaDao {
         database.execSQL(INSERT_MARCA, new String[] {marca.getDescricao()});
         loadMarcas();
     }
+
+    public boolean existeNaBase(Marca marca) {
+        return marcas.contains(marca);
+    }
 }

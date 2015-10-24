@@ -89,8 +89,10 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textMarca"
         android:layout_alignTop="@+id/textMarca"
-        android:layout_toRightOf="@+id/textMarca"
-         />
+        android:layout_alignLeft="@+id/editTextAlias"
+        android:layout_alignStart="@+id/editTextAlias"
+        android:layout_alignRight="@+id/editTextDesc"
+        android:layout_alignEnd="@+id/editTextDesc" />
 
     <TextView
         android:id="@+id/textNome"
@@ -173,8 +175,6 @@
         android:layout_alignTop="@+id/btnCancelar"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
-
-
 
 
 </RelativeLayout>

@@ -30,12 +30,17 @@
         </activity>
         <activity
             android:name=".CadastroActivity"
-            android:label="@string/title_activity_cadastro"
+            android:label="@string/AddProduto"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.AppBarOverlay" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="info.peilwebsystems.android.productregistration.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AdicionarMarcaActivity"
+            android:label="@string/AddMarca"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
 

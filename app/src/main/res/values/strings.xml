@@ -13,6 +13,6 @@
     <string name="categoria">Categoria:</string>
     <string name="sub_categoria">Sub Categoria:</string>
     <string name="marca">Marca:</string>
-    <string name="title_activity_asdf">asdf</string>
-    <string name="title_activity_main2">Main2Activity</string>
+    <string name="AddProduto">Adicionar Produto</string>
+    <string name="AddMarca">Adicionar Marca</string>
 </resources>
